@@ -1,7 +1,7 @@
 export const SITE_NAME = "위례 시민공원";
 export const SITE_DESCRIPTION =
   "93만㎡ 성남골프클럽 부지를 12만 위례 시민의 공원으로. 서명으로 함께해주세요.";
-export const SITE_URL = "https://wiryepark.kr";
+export const SITE_URL = "https://wiryevote.kr";
 
 export const ELECTION_DATE = new Date("2026-06-03");
 
