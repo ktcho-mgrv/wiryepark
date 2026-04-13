@@ -139,7 +139,7 @@ export default function CandidatesPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       <h1 className="text-3xl font-bold text-center mb-2">
-        2026 지방선거, SGC에 대한 후보 입장은?
+        2026 지방선거, SGC(성남골프클럽)에 대한 후보 입장은?
       </h1>
       <p className="text-center text-gray-500 mb-4">
         SGC 부지는 하남시 관할이므로 하남시장의 의지가 핵심입니다.
