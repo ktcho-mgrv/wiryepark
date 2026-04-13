@@ -2,37 +2,120 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "후보 입장 비교",
-  description: "2026 하남시장 후보들의 성남골프클럽 관련 입장을 비교합니다.",
+  description:
+    "2026 지방선거 하남시장·성남시장·송파구청장 후보들의 성남골프클럽 관련 입장을 비교합니다.",
 };
 
-const candidates = [
+/* ─── 하남시장 후보 ─── */
+const hanamCandidates = [
   {
     name: "이현재",
     party: "국민의힘",
     role: "현직 하남시장",
+    status: "후보 확정",
     stance: "골프장" as const,
     detail:
-      "퍼블릭 골프장 '위례골프장'으로 재개장 추진. 하남도시공사가 국방부로부터 부지 매입 후 운영 계획. 예상 사업비 약 8,700억 원.",
+      "퍼블릭 골프장 '위례골프장'으로 재개장 추진. 하남도시공사가 국방부로부터 부지 매입 후 운영 계획. 예상 사업비 약 8,700억 원. 에릭 트럼프(트럼프 그룹)와 글로벌 호텔·골프장 개발 협력 타진.",
   },
   {
     name: "서정완",
     party: "더불어민주당",
-    role: "이재명 대통령 정책선임팀장",
+    role: "전 대통령비서실 행정관",
+    status: "경선 진행 중 (1위)",
     stance: "미발표" as const,
-    detail: null,
+    detail:
+      "SGC 직접 언급 없음. 이현재 시장의 골프장·K스타월드를 '전시성'이라 비판. 수도권 1호 국가정원 조성 공약으로 대안 제시.",
   },
   {
     name: "강병덕",
     party: "더불어민주당",
     role: "민주당 대표 정책특보",
-    stance: "미발표" as const,
+    status: "경선 진행 중 (2위)",
+    stance: "기타" as const,
     detail:
-      "환경보전 성향. K스타월드 부지(미사섬)를 '국가정원'으로 조성해야 한다는 입장을 밝힌 바 있음. SGC 관련 공식 입장은 미발표.",
+      "해외 자본 중심이 아닌 공영개발을 통한 교통시설 확충과 시민 환원형 개발을 검토해야 한다는 입장. 교육시설 유치와 친환경 보존을 동시에 고려한 종합적 접근 필요성 언급.",
   },
   {
     name: "오후석",
     party: "더불어민주당",
-    role: "전 경기도 제2행정부지사",
+    role: "전 경기도 행정2부지사",
+    status: "경선 진행 중 (3위)",
+    stance: "미발표" as const,
+    detail:
+      "SGC 직접 언급 없음. 미사섬 국가정원 + AI 트라이앵글 공약으로 토지 활용 논의를 포지셔닝. 현 시장의 대형 개발 사업 재정 타당성에 의문 제기.",
+  },
+  {
+    name: "추민규",
+    party: "새미래민주당",
+    role: "전 경기도의원",
+    status: "예비후보 등록",
+    stance: "미발표" as const,
+    detail: null,
+  },
+];
+
+/* ─── 성남시장 후보 ─── */
+const seongnamCandidates = [
+  {
+    name: "신상진",
+    party: "국민의힘",
+    role: "현직 성남시장 (4선 국회의원 출신)",
+    status: "단수 공천 확정",
+    stance: "미발표" as const,
+    detail:
+      "SGC 관련 공식 입장 없음. 위례 스토리박스 부지에 첨단기업 유치 및 문화·체육시설 공약.",
+  },
+  {
+    name: "김병욱",
+    party: "더불어민주당",
+    role: "전 대통령실 정무비서관 (재선 국회의원 출신)",
+    status: "경선 진행 중",
+    stance: "미발표" as const,
+    detail:
+      "SGC 관련 공식 입장 없음. 위례 관련 '신사-위례-삼동선 조속 착공' 및 '지하철 8호선 판교 연장' 공약.",
+  },
+  {
+    name: "김지호",
+    party: "더불어민주당",
+    role: "전 민주당 대변인",
+    status: "경선 진행 중",
+    stance: "미발표" as const,
+    detail: null,
+  },
+  {
+    name: "장지화",
+    party: "진보당",
+    role: "진보당 공동대표",
+    status: "예비후보 등록",
+    stance: "미발표" as const,
+    detail: null,
+  },
+];
+
+/* ─── 송파구청장 후보 ─── */
+const songpaCandidates = [
+  {
+    name: "서강석",
+    party: "국민의힘",
+    role: "현직 송파구청장",
+    status: "후보 확정",
+    stance: "미발표" as const,
+    detail:
+      "SGC 관련 공식 입장 없음. 위례 트램·위례신사선 등 교통 현안 해결 중심으로 접근.",
+  },
+  {
+    name: "조재희",
+    party: "더불어민주당",
+    role: "전 한국폴리텍대학 이사장 (송파갑 지역위원장)",
+    status: "경선 진행 중 (1위)",
+    stance: "미발표" as const,
+    detail: null,
+  },
+  {
+    name: "박성수",
+    party: "더불어민주당",
+    role: "전 송파구청장 (민선 6·7기)",
+    status: "경선 진행 중 (2위)",
     stance: "미발표" as const,
     detail: null,
   },
@@ -45,11 +128,18 @@ const stanceColors = {
   기타: "bg-yellow-100 text-yellow-800",
 };
 
+const stanceLabels = {
+  공원: "공원 찬성",
+  골프장: "골프장 유지",
+  미발표: "미발표",
+  기타: "조건부 검토",
+};
+
 export default function CandidatesPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       <h1 className="text-3xl font-bold text-center mb-2">
-        2026 하남시장 후보, SGC에 대한 입장은?
+        2026 지방선거, SGC에 대한 후보 입장은?
       </h1>
       <p className="text-center text-gray-500 mb-4">
         SGC 부지는 하남시 관할이므로 하남시장의 의지가 핵심입니다.
@@ -61,31 +151,62 @@ export default function CandidatesPage() {
       {/* Election Info */}
       <div className="bg-blue-50 rounded-xl p-4 text-center mb-8">
         <p className="text-blue-800 font-medium">
-          투표일: <strong>2026년 6월 3일 (수)</strong> | 사전투표: 5월 29일(금)~30일(토)
+          투표일: <strong>2026년 6월 3일 (수)</strong> | 사전투표: 5월
+          29일(금)~30일(토)
         </p>
       </div>
 
-      {/* Hanam Mayor Candidates */}
+      {/* ── 하남시장 ── */}
       <section className="mb-12">
-        <h2 className="text-xl font-bold mb-6">하남시장 후보</h2>
+        <h2 className="text-xl font-bold mb-2">하남시장 후보</h2>
+        <p className="text-sm text-gray-500 mb-6">
+          SGC 부지의 직접 관할 지자체 — 시장의 결정이 가장 큰 영향력을 가집니다.
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {candidates.map((c) => (
+          {hanamCandidates.map((c) => (
             <CandidateCard key={c.name} {...c} />
           ))}
         </div>
+        <p className="text-xs text-gray-400 mt-4">
+          ※ 더불어민주당 하남시장 경선 진행 중 — 최종 후보 확정 후 업데이트
+          예정
+        </p>
       </section>
 
-      {/* Other mayors */}
+      {/* ── 성남시장 ── */}
       <section className="mb-12">
-        <h2 className="text-xl font-bold mb-4">성남시장 · 송파구청장 후보 입장</h2>
-        <div className="bg-gray-50 rounded-xl p-6 text-center">
-          <p className="text-gray-500">
-            SGC는 하남시 관할이나, 위례 전체에 영향을 미치는 이슈로
-            <br />
-            인접 지자체장의 입장도 중요합니다.
-          </p>
-          <p className="text-sm text-gray-400 mt-2">추후 업데이트 예정</p>
+        <h2 className="text-xl font-bold mb-2">성남시장 후보</h2>
+        <p className="text-sm text-gray-500 mb-6">
+          성남시 수정구 위례동 주민 약 45,826명이 SGC 부지 활용에 직접 영향을
+          받습니다.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {seongnamCandidates.map((c) => (
+            <CandidateCard key={c.name} {...c} />
+          ))}
         </div>
+        <p className="text-xs text-gray-400 mt-4">
+          ※ 더불어민주당 성남시장 경선 4월 13~14일 실시 — 결과 확정 후
+          업데이트 예정
+        </p>
+      </section>
+
+      {/* ── 송파구청장 ── */}
+      <section className="mb-12">
+        <h2 className="text-xl font-bold mb-2">송파구청장 후보</h2>
+        <p className="text-sm text-gray-500 mb-6">
+          서울 송파구 위례동 주민 약 45,083명이 SGC 부지 활용에 직접 영향을
+          받습니다.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {songpaCandidates.map((c) => (
+            <CandidateCard key={c.name} {...c} />
+          ))}
+        </div>
+        <p className="text-xs text-gray-400 mt-4">
+          ※ 더불어민주당 송파구청장 경선 진행 중 — 최종 후보 확정 후 업데이트
+          예정
+        </p>
       </section>
 
       {/* Disclaimer */}
@@ -96,7 +217,8 @@ export default function CandidatesPage() {
           공개된 자료와 보도를 기반으로 각 후보의 정책 입장만을 정리합니다.
         </p>
         <p className="text-xs text-gray-400 mt-2">
-          마지막 업데이트: 2026년 4월 | 각 후보 캠프에 입장 확인 요청 중
+          마지막 업데이트: 2026년 4월 | 각 캠프에서는 SGC 관련 구체적인 공약이
+          있다면 공식 공약에 포함해 주세요
         </p>
       </div>
     </div>
@@ -107,12 +229,14 @@ function CandidateCard({
   name,
   party,
   role,
+  status,
   stance,
   detail,
 }: {
   name: string;
   party: string;
   role: string;
+  status: string;
   stance: "공원" | "골프장" | "미발표" | "기타";
   detail: string | null;
 }) {
@@ -124,18 +248,19 @@ function CandidateCard({
           <p className="text-sm text-gray-500">
             {party} · {role}
           </p>
+          <p className="text-xs text-gray-400 mt-0.5">{status}</p>
         </div>
-        <span className={`text-xs font-semibold px-3 py-1 rounded-full ${stanceColors[stance]}`}>
-          {stance}
+        <span
+          className={`text-xs font-semibold px-3 py-1 rounded-full whitespace-nowrap ${stanceColors[stance]}`}
+        >
+          {stanceLabels[stance]}
         </span>
       </div>
       {detail ? (
         <p className="text-sm text-gray-600">{detail}</p>
       ) : (
         <div className="bg-gray-50 rounded-lg p-4 text-center">
-          <p className="text-gray-400 text-sm">
-            공식 입장 미발표
-          </p>
+          <p className="text-gray-400 text-sm">공식 입장 미발표</p>
           <p className="text-green-700 text-sm font-medium mt-1">
             시민 여러분의 질문이 필요합니다
           </p>
