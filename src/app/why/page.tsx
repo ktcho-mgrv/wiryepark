@@ -4,7 +4,6 @@ import {
   GOLF_PROJECT_COST,
   GOLF_PAYBACK_YEARS,
   GOLF_AVG_ANNUAL_PROFIT,
-  PARK_ESTIMATED_COST,
   SGC_AREA_SQM,
   WIRYE_POPULATION,
 } from "@/lib/constants";
@@ -153,9 +152,9 @@ export default function WhyPage() {
             </thead>
             <tbody className="divide-y divide-gray-100">
               <CompRow
-                label="추정 총사업비"
-                golf={`${GOLF_PROJECT_COST.toLocaleString()}억 원 *`}
-                park={`약 ${PARK_ESTIMATED_COST}억 원 **`}
+                label="평당 조성 단가"
+                golf="50~70만 원/평 *"
+                park="약 35만 원/평 *"
                 parkWin
               />
               <CompRow
@@ -196,10 +195,9 @@ export default function WhyPage() {
               />
             </tbody>
           </table>
-          <div className="mt-3 text-xs text-gray-400 space-y-1">
-            <p>* 토지 매입비 + 골프장 시설 개발비 합산 추정치 (하남도시공사, 상세 내역 미공개)</p>
-            <p>** 국토부 2025년 표준조성비 ㎡당 10.5만 원 기준 순수 공원 조성비. 토지 매입비는 골프장·공원 모두 동일하게 발생</p>
-          </div>
+          <p className="mt-3 text-xs text-gray-400">
+            * 순수 조성비(토지 매입비 제외). 공원: 국토부 2025 표준조성비 기준. 골프장: 18홀 공사비 400~600억 원 ÷ 27만 평 기준 시장 평균치
+          </p>
         </div>
       </section>
 
@@ -252,7 +250,7 @@ export default function WhyPage() {
           />
           <FAQ
             q="공원으로 만들면 비용은 얼마나 드나요?"
-            a={`국토부 2025년 표준조성비 기준 ㎡당 10.5만 원 × ${(SGC_AREA_SQM / 10000).toFixed(0)}만㎡ = 약 ${PARK_ESTIMATED_COST}억 원 (순수 조성비). 토지 매입비는 골프장이든 공원이든 동일하게 발생합니다.`}
+            a={`국토부 2025년 표준조성비 기준 ㎡당 10.5만 원 × ${(SGC_AREA_SQM / 10000).toFixed(0)}만㎡ = 약 980억 원 (순수 조성비). 토지 매입비는 골프장이든 공원이든 동일하게 발생합니다.`}
           />
           <FAQ
             q="SGC는 하남시 소유인가요?"
