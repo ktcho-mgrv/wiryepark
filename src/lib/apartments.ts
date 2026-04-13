@@ -19,6 +19,10 @@ export const apartmentsByDistrict: Record<District, string[]> = {
     "위례우미린",
     "LH위례신혼희망타운",
     "위례자이더센트럴",
+    "e편한세상위례",
+    "위례아이파크",
+    "아트리버푸르지오",
+    "호반베르디움위례",
   ],
   성남시: [
     "위례35단지 (LH임대)",
@@ -30,6 +34,7 @@ export const apartmentsByDistrict: Record<District, string[]> = {
     "래미안위례",
     "위례포레스트사랑으로부영",
     "위례31단지 (LH임대)",
+    "위례센트럴푸르지오",
   ],
   송파구: [
     "송파꿈에그린 (위례24단지)",
@@ -46,5 +51,8 @@ export const apartmentsByDistrict: Record<District, string[]> = {
     "송파레이크파크호반써밋I",
     "송파레이크파크호반써밋II",
     "송파위례리슈빌",
+    "위례더힐55",
+    "송파레이크힐",
+    "송파파인타운",
   ],
 };
