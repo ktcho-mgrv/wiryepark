@@ -172,7 +172,7 @@ export default function WhyPage() {
               <CompRow
                 label="투자 회수"
                 golf={`${GOLF_PAYBACK_YEARS}년 (사실상 불가)`}
-                park="공공 인프라 (회수 개념 아님)"
+                park="삶의 질 향상 + 세수 확보로 장기 충당"
                 parkWin
               />
               <CompRow
