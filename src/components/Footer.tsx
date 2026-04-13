@@ -10,7 +10,7 @@ export function Footer() {
             <Link href="/privacy" className="hover:text-gray-700">
               개인정보 처리방침
             </Link>
-            <a href="mailto:contact@wiryepark.kr" className="hover:text-gray-700">
+            <a href="mailto:contact@wiryevote.kr" className="hover:text-gray-700">
               문의
             </a>
           </div>

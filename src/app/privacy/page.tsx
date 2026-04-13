@@ -63,8 +63,8 @@ export default function PrivacyPage() {
           </ul>
           <p>
             요청 방법:{" "}
-            <a href="mailto:contact@wiryepark.kr" className="text-green-700 underline">
-              contact@wiryepark.kr
+            <a href="mailto:contact@wiryevote.kr" className="text-green-700 underline">
+              contact@wiryevote.kr
             </a>
             로 연락
           </p>
@@ -75,8 +75,8 @@ export default function PrivacyPage() {
             <li>성명: [캠페인 운영자 이름]</li>
             <li>
               연락처:{" "}
-              <a href="mailto:contact@wiryepark.kr" className="text-green-700 underline">
-                contact@wiryepark.kr
+              <a href="mailto:contact@wiryevote.kr" className="text-green-700 underline">
+                contact@wiryevote.kr
               </a>
             </li>
           </ul>
