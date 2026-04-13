@@ -92,7 +92,7 @@ export default function HomePage() {
             <TimelineItem year="1993" text="미8군 전용 골프장으로 개장" />
             <TimelineItem year="2017" text="미군 평택 이전, 골프장 운영 중단" />
             <TimelineItem year="2021" text="국방부에 공식 반환" />
-            <TimelineItem year="2025" text="토양오염 정화 착수 (1급 발암물질 검출)" />
+            <TimelineItem year="2024.6" text="토양오염 정화 착수 (1급 발암물질 검출)" />
             <TimelineItem year="2026.6.3" text="지방선거 — 시민의 선택" highlight />
             <TimelineItem year="?" text="시민공원? 골프장? 당신이 결정합니다" highlight />
           </div>

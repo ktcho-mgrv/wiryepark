@@ -60,10 +60,10 @@ export default function WhyPage() {
               골프 소비지출 <strong>16개월 연속 감소</strong> (한국관광공사)
             </li>
             <li>
-              전국 골프장 총 매출 2년간 <strong>14% 감소</strong> (9.9조 → 8.5조)
+              전국 골프장 총 매출 <strong>감소세 지속</strong> (약 9조 원대로 하락)
             </li>
             <li>
-              전국 <strong>30~60개 골프장이 매물·부도</strong> 상태
+              전국적으로 <strong>수십 곳의 골프장이 매물·부도</strong> 상태
             </li>
             <li>
               공영 골프장은 <strong>그린피 인하 압박</strong> → 민간 평균보다 수익 낮음
@@ -153,9 +153,9 @@ export default function WhyPage() {
             </thead>
             <tbody className="divide-y divide-gray-100">
               <CompRow
-                label="추정 개발비"
-                golf={`${GOLF_PROJECT_COST.toLocaleString()}억 원`}
-                park={`약 ${PARK_ESTIMATED_COST}~900억 원`}
+                label="추정 총사업비"
+                golf={`${GOLF_PROJECT_COST.toLocaleString()}억 원 *`}
+                park={`약 ${PARK_ESTIMATED_COST}억 원 **`}
                 parkWin
               />
               <CompRow
@@ -196,6 +196,10 @@ export default function WhyPage() {
               />
             </tbody>
           </table>
+          <div className="mt-3 text-xs text-gray-400 space-y-1">
+            <p>* 토지 매입비 + 골프장 시설 개발비 합산 추정치 (하남도시공사, 상세 내역 미공개)</p>
+            <p>** 국토부 2025년 표준조성비 ㎡당 10.5만 원 기준 순수 공원 조성비. 토지 매입비는 골프장·공원 모두 동일하게 발생</p>
+          </div>
         </div>
       </section>
 
@@ -248,7 +252,7 @@ export default function WhyPage() {
           />
           <FAQ
             q="공원으로 만들면 비용은 얼마나 드나요?"
-            a={`국토부 표준조성비 기준 ㎡당 8.8만 원 × ${(SGC_AREA_SQM / 10000).toFixed(0)}만㎡ = 약 ${PARK_ESTIMATED_COST}억 원. 골프장 추진비의 약 1/10 수준입니다.`}
+            a={`국토부 2025년 표준조성비 기준 ㎡당 10.5만 원 × ${(SGC_AREA_SQM / 10000).toFixed(0)}만㎡ = 약 ${PARK_ESTIMATED_COST}억 원 (순수 조성비). 토지 매입비는 골프장이든 공원이든 동일하게 발생합니다.`}
           />
           <FAQ
             q="SGC는 하남시 소유인가요?"
@@ -260,7 +264,7 @@ export default function WhyPage() {
           />
           <FAQ
             q="퍼블릭 골프장이 돈을 벌 수 있지 않나요?"
-            a={`대중형 평균 연 영업이익 ${GOLF_AVG_ANNUAL_PROFIT}억 원 기준, ${GOLF_PROJECT_COST.toLocaleString()}억 원 회수에 ${GOLF_PAYBACK_YEARS}년이 걸립니다. 골프 매출은 3년째 감소 중이며, 전국 60개 이상 골프장이 매물 상태입니다.`}
+            a={`대중형 평균 연 영업이익 ${GOLF_AVG_ANNUAL_PROFIT}억 원 기준, ${GOLF_PROJECT_COST.toLocaleString()}억 원 회수에 ${GOLF_PAYBACK_YEARS}년이 걸립니다. 골프 매출은 3년째 감소 중이며, 전국적으로 수십 곳의 골프장이 매물·부도 상태입니다.`}
           />
         </div>
       </section>

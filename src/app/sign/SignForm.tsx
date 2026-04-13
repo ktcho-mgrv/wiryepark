@@ -80,9 +80,12 @@ export function SignForm() {
         apartment: data.apartment,
         dong: data.dong,
         comment: data.comment || null,
-        source: typeof window !== "undefined"
-          ? new URLSearchParams(window.location.search).get("from")
-          : null,
+        source: (() => {
+          if (typeof window === "undefined") return null;
+          const ALLOWED = ["kakao", "naver", "instagram", "flyer", "qr", "neighbor"];
+          const raw = new URLSearchParams(window.location.search).get("from");
+          return raw && ALLOWED.includes(raw) ? raw : null;
+        })(),
         agreed_privacy: true,
       });
       if (error) {

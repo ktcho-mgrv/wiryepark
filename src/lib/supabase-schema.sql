@@ -40,11 +40,16 @@ alter table signatures enable row level security;
 alter table apartments enable row level security;
 alter table candidate_positions enable row level security;
 
--- 서명: 누구나 INSERT 가능, SELECT는 집계 뷰로만
+-- 서명: 누구나 INSERT 가능, SELECT는 명시적 차단 (집계 뷰로만 조회)
 create policy "Anyone can insert signature"
   on signatures for insert
   to anon
   with check (agreed_privacy = true);
+
+create policy "No direct select on signatures"
+  on signatures for select
+  to anon
+  using (false);
 
 -- 아파트 목록: 누구나 READ 가능
 create policy "Anyone can read apartments"
