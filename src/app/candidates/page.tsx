@@ -21,7 +21,7 @@ const hanamCandidates = [
     name: "서정완",
     party: "더불어민주당",
     role: "전 대통령비서실 행정관",
-    status: "경선 진행 중 (1위)",
+    status: "경선 결선 진출 (4/19~20 투표)",
     stance: "미발표" as const,
     detail:
       "SGC 직접 언급 없음. 이현재 시장의 골프장·K스타월드를 '전시성'이라 비판. 수도권 1호 국가정원 조성 공약으로 대안 제시.",
@@ -30,19 +30,10 @@ const hanamCandidates = [
     name: "강병덕",
     party: "더불어민주당",
     role: "민주당 대표 정책특보",
-    status: "경선 진행 중 (2위)",
+    status: "경선 결선 진출 (4/19~20 투표)",
     stance: "기타" as const,
     detail:
       "해외 자본 중심이 아닌 공영개발을 통한 교통시설 확충과 시민 환원형 개발을 검토해야 한다는 입장. 교육시설 유치와 친환경 보존을 동시에 고려한 종합적 접근 필요성 언급.",
-  },
-  {
-    name: "오후석",
-    party: "더불어민주당",
-    role: "전 경기도 행정2부지사",
-    status: "경선 진행 중 (3위)",
-    stance: "미발표" as const,
-    detail:
-      "SGC 직접 언급 없음. 미사섬 국가정원 + AI 트라이앵글 공약으로 토지 활용 논의를 포지셔닝. 현 시장의 대형 개발 사업 재정 타당성에 의문 제기.",
   },
   {
     name: "추민규",
@@ -69,18 +60,10 @@ const seongnamCandidates = [
     name: "김병욱",
     party: "더불어민주당",
     role: "전 대통령실 정무비서관 (재선 국회의원 출신)",
-    status: "경선 진행 중",
+    status: "후보 확정 (경선 승리)",
     stance: "미발표" as const,
     detail:
       "SGC 관련 공식 입장 없음. 위례 관련 '신사-위례-삼동선 조속 착공' 및 '지하철 8호선 판교 연장' 공약.",
-  },
-  {
-    name: "김지호",
-    party: "더불어민주당",
-    role: "전 민주당 대변인",
-    status: "경선 진행 중",
-    stance: "미발표" as const,
-    detail: null,
   },
   {
     name: "장지화",
@@ -115,7 +98,31 @@ const songpaCandidates = [
     name: "박성수",
     party: "더불어민주당",
     role: "전 송파구청장 (민선 6·7기)",
-    status: "경선 진행 중 (2위)",
+    status: "경선 진행 중",
+    stance: "미발표" as const,
+    detail: null,
+  },
+  {
+    name: "박용모",
+    party: "더불어민주당",
+    role: "전 송파구의회 의장",
+    status: "경선 진행 중",
+    stance: "미발표" as const,
+    detail: null,
+  },
+  {
+    name: "임동국",
+    party: "더불어민주당",
+    role: "전 송파구청 부구청장",
+    status: "경선 진행 중",
+    stance: "미발표" as const,
+    detail: null,
+  },
+  {
+    name: "안성용",
+    party: "더불어민주당",
+    role: "위례시민연대 대표",
+    status: "경선 진행 중",
     stance: "미발표" as const,
     detail: null,
   },
@@ -168,8 +175,8 @@ export default function CandidatesPage() {
           ))}
         </div>
         <p className="text-xs text-gray-400 mt-4">
-          ※ 더불어민주당 하남시장 경선 진행 중 — 최종 후보 확정 후 업데이트
-          예정
+          ※ 더불어민주당 하남시장 결선 투표 4/19~20 — 서정완 vs 강병덕. 최종
+          후보 확정 후 업데이트 예정
         </p>
       </section>
 
@@ -186,8 +193,8 @@ export default function CandidatesPage() {
           ))}
         </div>
         <p className="text-xs text-gray-400 mt-4">
-          ※ 더불어민주당 성남시장 경선 4월 13~14일 실시 — 결과 확정 후
-          업데이트 예정
+          ※ 민주당 성남시장 후보 김병욱 확정 (4/13~14 경선) — 김병욱 vs
+          신상진 대결 구도
         </p>
       </section>
 
@@ -204,8 +211,8 @@ export default function CandidatesPage() {
           ))}
         </div>
         <p className="text-xs text-gray-400 mt-4">
-          ※ 더불어민주당 송파구청장 경선 진행 중 — 최종 후보 확정 후 업데이트
-          예정
+          ※ 더불어민주당 송파구청장 5인 경선 진행 중 — 최종 후보 확정 후
+          업데이트 예정
         </p>
       </section>
 
@@ -217,8 +224,8 @@ export default function CandidatesPage() {
           공개된 자료와 보도를 기반으로 각 후보의 정책 입장만을 정리합니다.
         </p>
         <p className="text-xs text-gray-400 mt-2">
-          마지막 업데이트: 2026년 4월 | 각 캠프에서는 SGC 관련 구체적인 공약이
-          있다면 공식 공약에 포함해 주세요
+          마지막 업데이트: 2026년 4월 13일 | 각 캠프에서는 SGC 관련 구체적인
+          공약이 있다면 공식 공약에 포함해 주세요
         </p>
       </div>
     </div>
