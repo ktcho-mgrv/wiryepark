@@ -5,6 +5,7 @@ import Link from "next/link";
 import { signatureSchema, type SignatureFormData } from "@/lib/validation";
 import { districts, apartmentsByDistrict, type District } from "@/lib/apartments";
 import { supabase } from "@/lib/supabase";
+import { ShareButtons } from "@/components/ShareButtons";
 
 export function SignForm() {
   const [form, setForm] = useState({
@@ -112,25 +113,10 @@ export function SignForm() {
         <p className="text-gray-600 mb-6">
           위례 시민공원을 위한 소중한 서명이 등록되었습니다.
         </p>
-        <div className="flex flex-col gap-3">
-          <button
-            className="bg-yellow-400 text-gray-900 font-semibold px-6 py-3 rounded-xl hover:bg-yellow-500 transition-colors"
-            onClick={() => {
-              if (typeof navigator !== "undefined" && navigator.share) {
-                navigator.share({
-                  title: "위례 시민공원 서명",
-                  text: "93만㎡ 성남골프클럽을 12만 위례 시민의 공원으로! 서명으로 함께해주세요.",
-                  url: window.location.origin,
-                });
-              }
-            }}
-          >
-            이웃에게 공유하기
-          </button>
-          <Link href="/dashboard" className="text-green-700 font-medium hover:underline">
-            서명 현황 보기
-          </Link>
-        </div>
+        <ShareButtons className="justify-center mb-4" />
+        <Link href="/dashboard" className="text-green-700 font-medium hover:underline">
+          서명 현황 보기
+        </Link>
       </div>
     );
   }

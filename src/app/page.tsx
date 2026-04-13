@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { DdayCounter } from "@/components/DdayCounter";
 import { SignatureCounter } from "@/components/SignatureCounter";
+import { ShareButtons } from "@/components/ShareButtons";
 import {
   WIRYE_POPULATION,
   GOLF_PROJECT_COST,
@@ -104,9 +105,10 @@ export default function HomePage() {
         <div className="max-w-3xl mx-auto px-4">
           <h2 className="text-3xl font-bold mb-4">위례의 미래를 함께 만들어요</h2>
           <p className="text-green-100 text-lg mb-8">하남, 성남, 송파 — 위례에 사는 모든 이웃의 목소리가 필요합니다.</p>
-          <Link href="/sign" className="inline-block bg-white text-green-700 text-lg font-bold px-10 py-4 rounded-xl hover:bg-green-50 transition-colors">
+          <Link href="/sign" className="inline-block bg-white text-green-700 text-lg font-bold px-10 py-4 rounded-xl hover:bg-green-50 transition-colors mb-6">
             서명으로 함께하기
           </Link>
+          <ShareButtons className="justify-center" />
         </div>
       </section>
     </>
