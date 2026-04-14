@@ -15,9 +15,16 @@ export function Footer() {
             </a>
           </div>
         </div>
-        <p className="text-center text-xs text-gray-400 mt-4">
-          본 캠페인은 특정 정당이나 후보를 지지·반대하지 않으며, 정책 이슈에 대한 시민 의견 수렴을 목적으로 합니다.
-        </p>
+        <div className="text-center text-xs text-gray-400 mt-4 space-y-1">
+          <p>
+            본 사이트는 2026년 지방선거에서 후보자들에게 성남골프클럽 부지의 시민공원 조성을 요구하기 위한
+            비영리 시민 캠페인입니다. 어떠한 상업적 목적도 없으며, 특정 정당이나 후보를 지지·반대하지 않습니다.
+          </p>
+          <p>
+            수집된 서명은 후보자들에게 시민의 뜻을 전달하는 용도로만 사용되며,
+            선거 종료 후 3개월 이내에 전량 파기됩니다.
+          </p>
+        </div>
       </div>
     </footer>
   );

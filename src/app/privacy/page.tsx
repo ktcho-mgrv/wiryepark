@@ -10,6 +10,19 @@ export default function PrivacyPage() {
     <div className="max-w-3xl mx-auto px-4 py-12">
       <h1 className="text-3xl font-bold mb-8">개인정보 처리방침</h1>
       <div className="prose prose-gray max-w-none space-y-6 text-sm leading-relaxed">
+        <div className="bg-green-50 border border-green-200 rounded-xl p-5 text-green-900 space-y-2">
+          <p className="font-semibold">
+            본 사이트는 2026년 지방선거에서 후보자들에게 성남골프클럽(SGC) 부지의
+            시민공원 조성을 요구하기 위한 비영리 시민 캠페인입니다.
+          </p>
+          <p>
+            어떠한 상업적 목적도 없으며, 서명에 필요한 최소한의 정보만을 수집합니다.
+            수집된 정보는 오직 후보자들에게 시민의 뜻을 전달하는 용도로만 사용되고,
+            개별 인적사항은 비식별 처리하여 전달합니다.
+            선거 종료 후 3개월 이내에 모든 개인정보를 복구 불가능한 방법으로 파기합니다.
+          </p>
+        </div>
+
         <p className="text-gray-600">
           위례 시민공원 추진 캠페인(이하 &quot;캠페인&quot;)은 개인정보보호법에 따라
           이용자의 개인정보를 보호하고 이와 관련한 고충을 신속하게

@@ -237,6 +237,11 @@ export function SignForm() {
         <p className="text-red-500 text-sm">{errors.agreedPrivacy}</p>
       )}
 
+      <p className="text-xs text-gray-400 leading-relaxed">
+        본 서명은 후보자들에게 시민의 뜻을 전달하는 용도로만 사용됩니다.
+        상업적 목적은 없으며, 선거 종료 후 3개월 이내에 모든 정보를 파기합니다.
+      </p>
+
       <button
         type="submit"
         disabled={submitting}
