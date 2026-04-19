@@ -21,19 +21,19 @@ const hanamCandidates = [
     name: "서정완",
     party: "더불어민주당",
     role: "전 대통령비서실 행정관",
-    status: "경선 결선 진출 (4/19~20 투표)",
+    status: "경선 결선 투표 중 (4/19~20)",
     stance: "미발표" as const,
     detail:
-      "SGC 직접 언급 없음. 이현재 시장의 골프장·K스타월드를 '전시성'이라 비판. 수도권 1호 국가정원 조성 공약으로 대안 제시.",
+      "SGC 직접 언급 없음. 이현재 시장의 골프장·K스타월드를 '전시성'이라 비판. 수도권 1호 국가정원 조성 공약으로 대안 제시. 1차 경선 1위 (23.6%). 김용(전 성남시장) 지원.",
   },
   {
     name: "강병덕",
     party: "더불어민주당",
     role: "민주당 대표 정책특보",
-    status: "경선 결선 진출 (4/19~20 투표)",
+    status: "경선 결선 투표 중 (4/19~20)",
     stance: "기타" as const,
     detail:
-      "해외 자본 중심이 아닌 공영개발을 통한 교통시설 확충과 시민 환원형 개발을 검토해야 한다는 입장. 교육시설 유치와 친환경 보존을 동시에 고려한 종합적 접근 필요성 언급.",
+      "해외 자본 중심이 아닌 공영개발을 통한 교통시설 확충과 시민 환원형 개발을 검토해야 한다는 입장. 교육시설 유치와 친환경 보존을 동시에 고려한 종합적 접근 필요성 언급. 오후석 후보 지지 선언, 송영길 전 대표 지원, 6개 단체 공개 지지.",
   },
   {
     name: "추민규",
@@ -90,41 +90,19 @@ const songpaCandidates = [
     name: "조재희",
     party: "더불어민주당",
     role: "전 한국폴리텍대학 이사장 (송파갑 지역위원장)",
-    status: "경선 진행 중 (1위)",
+    status: "결선 진출 (4/16~17 경선 1위, 20.1%)",
     stance: "미발표" as const,
-    detail: null,
+    detail:
+      "SGC 관련 공식 입장 없음. 정책·행정 전문가, 이재명 정부 소통력 강점. 가상대결 서강석 대비 우세 (48.5% vs 34.9%).",
   },
   {
     name: "박성수",
     party: "더불어민주당",
     role: "전 송파구청장 (민선 6·7기)",
-    status: "경선 진행 중",
+    status: "결선 진출 (4/16~17 경선 2위, 17.9%)",
     stance: "미발표" as const,
-    detail: null,
-  },
-  {
-    name: "박용모",
-    party: "더불어민주당",
-    role: "전 송파구의회 의장",
-    status: "경선 진행 중",
-    stance: "미발표" as const,
-    detail: null,
-  },
-  {
-    name: "임동국",
-    party: "더불어민주당",
-    role: "전 송파구청 부구청장",
-    status: "경선 진행 중",
-    stance: "미발표" as const,
-    detail: null,
-  },
-  {
-    name: "안성용",
-    party: "더불어민주당",
-    role: "위례시민연대 대표",
-    status: "경선 진행 중",
-    stance: "미발표" as const,
-    detail: null,
+    detail:
+      "SGC 관련 공식 입장 없음. 민선 6·7기 송파구청장 역임. 가상대결 서강석 대비 우세 (48.5% vs 33.6%).",
   },
 ];
 
@@ -175,8 +153,8 @@ export default function CandidatesPage() {
           ))}
         </div>
         <p className="text-xs text-gray-400 mt-4">
-          ※ 더불어민주당 하남시장 결선 투표 4/19~20 — 서정완 vs 강병덕. 최종
-          후보 확정 후 업데이트 예정
+          ※ 더불어민주당 하남시장 결선 투표 진행 중 (4/19~20) — 서정완 vs 강병덕.
+          결과 확정 즉시 업데이트 예정
         </p>
       </section>
 
@@ -211,7 +189,7 @@ export default function CandidatesPage() {
           ))}
         </div>
         <p className="text-xs text-gray-400 mt-4">
-          ※ 더불어민주당 송파구청장 5인 경선 진행 중 — 최종 후보 확정 후
+          ※ 더불어민주당 송파구청장 결선: 조재희 vs 박성수 — 결과 확정 즉시
           업데이트 예정
         </p>
       </section>
@@ -224,7 +202,7 @@ export default function CandidatesPage() {
           공개된 자료와 보도를 기반으로 각 후보의 정책 입장만을 정리합니다.
         </p>
         <p className="text-xs text-gray-400 mt-2">
-          마지막 업데이트: 2026년 4월 13일 | 각 캠프에서는 SGC 관련 구체적인
+          마지막 업데이트: 2026년 4월 19일 | 각 캠프에서는 SGC 관련 구체적인
           공약이 있다면 공식 공약에 포함해 주세요
         </p>
       </div>
